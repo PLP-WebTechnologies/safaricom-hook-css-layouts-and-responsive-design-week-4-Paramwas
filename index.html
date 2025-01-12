@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Webpage</title>
+    <style>
+        :root {
+            --primary-color: #0078d7;
+            --secondary-color: #f3f3f3;
+            --text-color: #333;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: var(--text-color);
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem;
+        }
+
+        header .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        header .logo img {
+            height: 40px;
+            vertical-align: middle;
+        }
+
+        nav {
+            display: flex;
+            gap: 1rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--secondary-color);
+        }
+
+        .main-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            padding: 2rem;
+        }
+
+        .main-content img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        footer a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            margin: 0 0.5rem;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            header, footer {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .main-content {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (min-width: 601px) and (max-width: 1024px) {
+            .main-content {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (min-width: 1025px) {
+            header, footer {
+                flex-direction: row;
+            }
+        }
+
+        /* Bonus: Smooth transitions */
+        * {
+            transition: all 0.3s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="kanye.jpg" alt="Logo">
+        </div>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+
+    <div class="main-content">
+        <div>
+            <h1>Playlist Website</h1>
+            <p>Here are some of the biggest hit makes making grate waves in the global market Through out the world .</p>
+        </div>
+        <div>
+            <img src="asake.jfif" alt="Asake">
+            <img src="drake.jfif" alt="Wizkid">
+           
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Your Company. All rights reserved.</p>
+        <p>
+            <a href="https://www.facebook.com/">Facebook</a>
+            <a href="https://x.com/?lang=en">X</a>
+            <a href="https://www.instagram.com/">Instagram</a>
+        </p>
+    </footer>
+</body>
+</html>
